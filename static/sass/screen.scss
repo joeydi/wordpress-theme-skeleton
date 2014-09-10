@@ -1,0 +1,29 @@
+@import 'compass/utilities';
+@import 'compass/css3';
+@import 'variables';
+@import 'bootstrap_variables';
+@import 'mixins';
+@import '../js/libs/fontawesome/scss/font-awesome.scss';
+@import '../js/libs/bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin-top: 73px;
+
+    @include respond-to(small) {
+        margin-top: 102px;
+    }
+}
+
+.container {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
