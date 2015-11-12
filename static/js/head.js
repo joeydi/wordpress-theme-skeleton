@@ -1,4 +1,4 @@
-var Podius = Podius || {};
+var Fervor = Fervor || {};
 
 // Custom path for webfonts include
-var customPath = Podius.template_directory_url + '/static/';
+var customPath = Fervor.template_directory_url + '/static/';

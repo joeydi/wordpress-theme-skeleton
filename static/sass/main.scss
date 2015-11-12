@@ -1,10 +1,8 @@
-@import 'compass/utilities';
-@import 'compass/css3';
 @import 'variables';
 @import 'bootstrap_variables';
 @import 'mixins';
-@import '../js/libs/fontawesome/scss/font-awesome.scss';
-@import '../js/libs/bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
+@import 'bootstrap';
+@import 'font-awesome';
 
 html,
 body {
@@ -14,7 +12,7 @@ body {
 body {
     margin-top: 73px;
 
-    @include respond-to(small) {
+    @include small {
         margin-top: 102px;
     }
 }

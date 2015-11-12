@@ -1,8 +1,8 @@
 <?php
 
-new Podius();
+new Fervor();
 
-class Podius {
+class Fervor {
     private $version;
 
     function __construct() {
@@ -50,12 +50,12 @@ class Podius {
             'template_directory_url' => get_stylesheet_directory_uri(),
         );
 
-        wp_localize_script( 'main', 'Podius', $data );
+        wp_localize_script( 'main', 'Fervor', $data );
     }
 
     function action_enqueue_styles() {
         wp_enqueue_style( 'fonts', 'http://fonts.googleapis.com/css?family=Merriweather:300,400,700,300italic,400italic,700italic', false, $this->version );
-        wp_enqueue_style( 'screen', get_stylesheet_directory_uri() . '/static/css/screen.css', false, $this->version );
+        wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/static/css/main.css', false, $this->version );
     }
 
     function filter_the_permalink( $url ) {

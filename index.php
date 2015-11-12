@@ -18,13 +18,10 @@
                     <?php the_content(); ?>
                     <?php else : ?>
                     <h3><?php the_date(); ?></h3>
-                    <h1><a href="<?php the_permalink(); ?>"><?php OSLC::the_title(); ?></a></h1>
+                    <h1><a href="<?php the_permalink(); ?>"><?php Fervor::the_title(); ?></a></h1>
                     <?php the_excerpt(); ?>
                     <?php endif; ?>
-
-                <?php endwhile; ?>
-                    <?php wp_pagenavi(); ?>
-                <?php else : ?>
+                <?php endwhile; else : ?>
                     <h1>Sorry, there are no posts.</h1>
                 <?php endif; ?>
             </div>

@@ -1,8 +1,9 @@
 /* global jQuery, Modernizr */
 
-var OSLC = OSLC || {};
+var $ = $ || jQuery,
+    Fervor = Fervor || {};
 
-OSLC.mq = {
+Fervor.mq = {
     'xs': '(min-width: 480px)',
     'sm': '(min-width: 768px)',
     'md': '(min-width: 992px)',

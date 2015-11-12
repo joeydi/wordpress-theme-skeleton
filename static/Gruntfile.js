@@ -1,12 +1,20 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        compass: {
+        sass: {
+            options: {
+                sourceMap: true,
+                outputStyle: 'compressed',
+                includePaths: [
+                    'libs',
+                    'libs/fontawesome/scss',
+                    'libs/bootstrap-sass/assets/stylesheets'
+                ]
+            },
             dist: {
-                options: {
-                    'output-style': 'compressed',
-                    'sass-dir': 'sass',
-                    'css-dir': 'css'
+                files: {
+                    'css/main.css': 'sass/main.scss',
+                    'css/print.css': 'sass/print.scss'
                 }
             }
         },
@@ -28,14 +36,14 @@ module.exports = function (grunt) {
             head: {
                 src: [
                     'js/head.js',
-                    'js/libs/modernizr/modernizr.js',
-                    'js/libs/respond/src/respond.js',
+                    'libs/modernizr/modernizr.js',
+                    'libs/respond/src/respond.js',
                 ],
                 dest: 'js/build/head.js',
             },
             main: {
                 src: [
-                    'js/libs/bootstrap-sass-official/assets/javascripts/bootstrap.js',
+                    'libs/bootstrap-sass-official/assets/javascripts/bootstrap.js',
                     'js/main.js'
                 ],
                 dest: 'js/build/main.js',
@@ -61,7 +69,10 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: 'sass/*.scss',
-                tasks: ['compass:dist']
+                tasks: ['sass:dist'],
+                options: {
+                    livereload: true
+                }
             },
             scripts: {
                 files: ['js/*.js'],
@@ -74,7 +85,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');

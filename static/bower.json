@@ -1,25 +1,25 @@
 {
-    "name": "oregon-social-learning-center",
-    "version": "0.0.1",
-    "dependencies": {
-        "modernizr": "~2.8.2",
-        "respond": "~1.4.2",
-        "fontawesome": "~4.1.0",
-        "FitVids": "~1.1.0",
-        "bootstrap-sass-official": "~3.2.0+1",
-    },
-    "private": true,
-    "homepage": "http://podius.com/",
-    "authors": [
-        "Joe di Stefano <joeydi@okaypl.us>"
-    ],
-    "license": "MIT",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "js/libs",
-        "test",
-        "tests"
-    ]
+  "name": "fervor",
+  "version": "0.0.1",
+  "dependencies": {
+    "modernizr": "~2.8.2",
+    "respond": "~1.4.2",
+    "fontawesome": "~4.1.0",
+    "FitVids": "~1.1.0",
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5"
+  },
+  "private": true,
+  "homepage": "http://fervorcreative.com/",
+  "authors": [
+    "Joe di Stefano <joeydi@okaypl.us>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/libs",
+    "test",
+    "tests"
+  ]
 }

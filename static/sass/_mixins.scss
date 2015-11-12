@@ -1,0 +1,29 @@
+@mixin small {
+    @media (min-width: $screen-sm-min) { @content; }
+}
+
+@mixin medium {
+    @media (min-width: $screen-md-min) { @content; }
+}
+
+@mixin large {
+    @media (min-width: $screen-lg-min) { @content; }
+}
+
+@mixin fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin cover {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+@mixin default-box-shadow {
+    box-shadow: 0 0 5px transparentize($dark-blue, 0.5);
+}
